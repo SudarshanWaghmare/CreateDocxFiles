@@ -19,9 +19,9 @@ int main() {
 		owner = strtok(NULL, "\n");
 
 		
-		NFile = fopen(FileName, "a+");
-		fputs("File Name: ", NFile);
-		fputs(DSName, NFile);
+		NFile = fopen(FileName, "w+");
+		fputs("File Name: ", NFile);		
+		fprintf(NFile, DSName);
 
 		fclose(NFile);
 	}	
