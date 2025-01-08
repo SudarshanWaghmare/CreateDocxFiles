@@ -16,7 +16,7 @@ int main() {
 		DSName = strtok(FileLine, ",");
 		FileExten = strtok(NULL, ",");
 		FileName = strtok(NULL, ",");
-		owner = strtok(NULL, ",");
+		owner = strtok(NULL, "\n");
 
 		
 		NFile = fopen(FileName, "a+");
