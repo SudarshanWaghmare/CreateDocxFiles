@@ -10,14 +10,15 @@ int main() {
 	char* FileExten;
 	char* FileName;
 	char* owner;
+	
 
-	while (fgets(FileLine, 200, fp)) {
+	while (fgets(FileLine, 200, fp) != NULL) {
 		
 		DSName = strtok(FileLine, ",");
 		FileExten = strtok(NULL, ",");
 		FileName = strtok(NULL, ",");
-		owner = strtok(NULL, "\n");
-
+		owner = strtok(NULL, "\N");
+		
 		
 		NFile = fopen(FileName, "w+");
 		fputs("File Name: ", NFile);		
